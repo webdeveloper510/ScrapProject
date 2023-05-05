@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 def start():
     try:
         scheduler = BackgroundScheduler()
-        scheduler.add_job(send_request, 'interval', minutes=1)
+        scheduler.add_job(send_request, 'interval', minutes=2880)
         scheduler.start()
         logger.info('Scheduler started successfully!')
     except Exception as e:

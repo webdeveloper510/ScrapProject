@@ -32,7 +32,7 @@ class ScrapDataView(APIView):
             })
 
   
-    for i in range(1,1):
+    for i in range(1,500):
        url = 'https://www.topgear.com/car-news?page='+str(i)
        base_url = 'https://www.topgear.com'
        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'}
