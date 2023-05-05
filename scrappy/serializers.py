@@ -3,8 +3,8 @@ from .models import *
 
 class DataScrapingSerializer(serializers.ModelSerializer):
      class Meta:
-        model= DataScraping
+        model= WebDataScraping
         fields = '__all__'
            
      def create(self, validate_data):
-         return DataScraping.objects.create(**validate_data)
+         return WebDataScraping.objects.create(**validate_data)

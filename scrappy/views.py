@@ -54,12 +54,12 @@ class ScrapDataView(APIView):
                 })
        
     # print(article_data)
-    delete_Data=DataScraping.objects.all().delete()
+    delete_Data=WebDataScraping.objects.all().delete()
     for data in article_data:
             title=data['Title']
             image_url=data['Image source']
             anchor=data['Link']
-            scrappy=DataScraping.objects.create(image_url=image_url,anchor=anchor,title=title)
+            scrappy=WebDataScraping.objects.create(image_url=image_url,anchor=anchor,title=title)
             serializers=DataScrapingSerializer(data=scrappy)
             scrappy.save()
             print(scrappy)
